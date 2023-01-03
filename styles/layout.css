@@ -1,0 +1,31 @@
+@import "root.css";
+
+.container {
+    /*background: aquamarine;*/
+    height: 100vh;
+}
+
+.top-container {
+    display: flex;
+    /*background: red;*/
+    height: calc(100vh - var(--bottom-height));
+}
+.top-container > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-container > div:first-child {
+    flex: 2;
+    background: #4d4c4cfc;
+}
+.top-container > div:last-child {
+    flex: 1;
+    /*background: rgba(204, 69, 77, 0.63);*/
+    background: var(--choclate);
+}
+
+.bottom-container {
+    background: blue;
+    height: var(--bottom-height);
+}

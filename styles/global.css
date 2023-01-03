@@ -1,0 +1,11 @@
+@import "reset.css";
+@import "normalize.css";
+@import "layout.css";
+@import "control-box.css";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
