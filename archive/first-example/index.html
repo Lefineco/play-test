@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleslobal.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="top-container">
+        <div>
+            <div id="video-showing-box">
+            </div>
+        </div>
+        <div>
+            <div class="controls">
+                <div class="controls-input-container">
+                    <label class="input-controls-label" for="video_id">Video ID</label>
+                    <input class="input-controls-input" id="video_id" type="text" placeholder="test" maxlength="11"
+                           minlength="11">
+                    <button class="input-controls-button" id="submit">add</button>
+                </div>
+                <span class="title-box">control buttons</span>
+                <div class="controls-buttons-container">
+                    <button class="controls-button" id="play">Play</button>
+                    <button class="controls-button" id="pause">Pause</button>
+                    <button class="controls-button" id="stop">Stop</button>
+                </div>
+                <div class="controls-slider-container">
+                    <div class="slider-box">
+                        <label class="slider-label" for="volume">Volume</label>
+                        <input class="slider-input" id="volume" type="range" min="0" max="100" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-container">
+        <div class="slider-box">
+            <input class="slider-input" id="duration" type="range" min="0" max="100" value="0">
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
