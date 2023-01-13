@@ -1,51 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lefine Embed Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/global.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/global.css">
 </head>
 <body>
-<div class="container">
-    <div class="top-container">
-        <div>
-            <div id="video-showing-box">
+
+<div class="app">
+    <section id="entry-section">
+        <div class="card-wrapper">
+            <div class="card-header">
+                <img src="assets/images/logo.png" class="card-header-barend-logo">
+                <span class="card-header-title">Enter video url</span>
+            </div>
+            <div class="card-body">
+                <input type="text" id="video-url" class="card-body-input"
+                       placeholder="https://www.youtube.com/watch?v=QRqY_20ti9A"/>
+            </div>
+            <div class="card-footer">
+                <button id="card-footer-button" class="card-footer-button cs-btn disable-btn">Submit</button>
             </div>
         </div>
-        <div>
-            <div class="controls">
-                <div class="controls-input-container">
-                    <label class="input-controls-label" for="video_id">Video ID</label>
-                    <input class="input-controls-input" id="video_id" type="text" placeholder="test" maxlength="11"
-                           minlength="11">
-                    <button class="input-controls-button" id="submit">add</button>
+    </section>
+    <section id="video-watch-section">
+        <div class="back-button-box">
+            <button id="video-watch-section-back-button" class="video-watch-section-back-button cs-btn">Back</button>
+        </div>
+        <div class="video-wrapper">
+            <div>
+                <div id="video-showing-box">
                 </div>
-                <span class="title-box">control buttons</span>
-                <div class="controls-buttons-container">
-                    <button class="controls-button" id="play">Play</button>
-                    <button class="controls-button" id="pause">Pause</button>
-                    <button class="controls-button" id="stop">Stop</button>
-                </div>
-                <div class="controls-slider-container">
-                    <div class="slider-box">
-                        <label class="slider-label" for="volume">Volume</label>
-                        <input class="slider-input" id="volume" type="range" min="0" max="100" value="0">
+            </div>
+            <div class="video-controller-wrapper">
+                <button id="video-controller-wrapper-status-button">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+        <div class="controller-video-box">
+            <ul>
+                <li>
+                    <button id="video-status-button">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </li>
+                <li>
+                    <button id="video-status-mute">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="volume-range-box">
+                        <input id="volume-range" type="range" min="0" />
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <input id="duration-range" type="range" min="0" max="100"/>
+                </li>
+                <li>
+                    <button id="video-expand-button">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="bottom-container">
-        <div class="slider-box">
-            <input class="slider-input" id="duration" type="range" min="0" max="100" value="0">
-        </div>
-    </div>
+    </section>
 </div>
-<script src="script.js"></script>
+
+<script src="./assets/scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,87 @@
+#entry-section {
+    height: 100vh;
+    background: #5a1bff30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    height: 300px;
+    width: 50%;
+    row-gap: 10px;
+    /*background: purple;*/
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-wrapper > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    /*background: pink;*/
+    flex-direction: column;
+    flex: 2;
+    row-gap: 10px;
+}
+
+.card-header-barend-logo {
+    height: 64px;
+}
+
+.card-header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    color: #5a1bff;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    /*background: mediumpurple;*/
+    flex: 1;
+}
+
+.card-footer {
+    /*background: cornflowerblue;*/
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        width: 90%;
+    }
+}
+
+.card-body-input {
+    height: 50px;
+    width: 95%;
+    border-radius: 50px;
+    border: none;
+    outline-offset: 4px;
+    padding: 10px 20px;
+    outline: none;
+    caret-color: #5a1bff;
+    color: #5a1bff;
+    border: 4px solid transparent;
+    letter-spacing: 1px;
+    background-color: #fff;
+}
+
+.card-body-input:focus {
+    outline: 2px solid #5a1bff;
+}
+
+.card-body-input::placeholder {
+    color: rgba(90, 27, 255, 0.36);
+}
+

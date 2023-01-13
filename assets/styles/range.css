@@ -1,0 +1,111 @@
+.volume-range-box {
+    visibility: hidden;
+    position: absolute;
+    top: 1px;
+    transform: rotate(270deg);
+    top: -150%;
+    padding: 10px;
+    transition: all .1s ease-in-out;
+}
+
+#volume-range {
+    cursor: grab;
+}
+
+#volume-range:active {
+    cursor: grabbing;
+}
+
+#video-status-mute:hover ~ .volume-range-box {
+    cursor: pointer;
+    visibility: visible;
+}
+
+.controller-video-box > ul > li:nth-child(3) {
+    flex: 15;
+    padding: 15px 10PX;
+}
+
+.controller-video-box > ul > li > button, #video-controller-wrapper-status-button {
+    height: 35px;
+    width: 35px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #5a1bff;
+    position: relative;
+}
+
+.controller-video-box > ul > li > button:after, #video-controller-wrapper-status-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: transparent;
+    top: 0;
+    left: 0;
+}
+#video-controller-wrapper-status-button{
+    transform: scale(1.5);
+}
+
+.controller-video-box > ul > li > button:hover, #video-controller-wrapper-status-button:hover {
+    background: rgba(90, 27, 255, 0.1);
+    backdrop-filter: blur(120px);
+}
+
+/* RANGE */
+.volume-range-box:hover {
+    visibility: visible;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 15px;
+    background: #dcd2f8;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    color: #5a1bff;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #5a1bff;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #c7b3ff;
+    border: 3px solid #5a1bff;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    cursor: grab;
+}
+
+input[type="range"]::-moz-range-thumb:active {
+    cursor: grabbing;
+}
+
+#volume-range {
+    width: 80px;
+}
+
+#duration-range {
+    width: 100%;
+}
+
